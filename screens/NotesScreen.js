@@ -10,8 +10,8 @@ import { Entypo } from "@expo/vector-icons";
 
 export default function NotesScreen({ navigation }) {
   const [notes, setNotes] = useState([
-    { title: "Walk the cat", done: false, id: "0" },
-    { title: "Feed the elephant", done: false, id: "1" },
+    { title: "Dinner", done: false, id: "0" },
+    { title: "sleep", done: false, id: "1" },
   ]);
 
   useEffect(() => {
