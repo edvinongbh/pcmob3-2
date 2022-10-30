@@ -9,11 +9,12 @@ import {
 import { Entypo } from "@expo/vector-icons";
 import * as SQLite from "expo-sqlite";
 
+const db = SQLite.openDatabase("notes.db");
+
 export default function NotesScreen({ navigation, route }) {
   const [notes, setNotes] = useState([]);
 
   useEffect(() => {
-    // route= { params: { text: "hello"} }
     if (route.params?.text) {
       const newNote = {
         title: route.params.text,
